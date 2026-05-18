@@ -7,4 +7,4 @@ const topTaskWorld = [
 // типу легко вивчити а ось типу хтмл і цсс тип не реально ахахах) ну і все)) щас ебашить буду фільтр)
 
 const titles = topTaskWorld.map(task => task.text);
-console.log(titles);
+console.log(titles); // мапчик
