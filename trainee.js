@@ -1,19 +1,139 @@
-// const topTaskWorld = [
-//     { id: 1, text: 'Зрозуміти С', completed: true, priority: 'low' },
-//     { id: 2, text: 'Зрозуміти СSS', completed: false, priority: 'high' },
-//     { id: 3, text: 'Зрозуміти HTML', completed: false, priority: 'high' },
-//     { id: 4, text: 'Зрозуміти Pascale', completed: true, priority: 'low' }
-// ]; // Создав змінну з камал кейс по стандарту, далі ну обьекти, ну і стьоб зробив типу ну бля, типу с і паскал
-// // типу легко вивчити а ось типу хтмл і цсс тип не реально ахахах) ну і все)) щас ебашить буду фільтр)
+// // const topTaskWorld = [
+// //     { id: 1, text: 'Зрозуміти С', completed: true, priority: 'low' },
+// //     { id: 2, text: 'Зрозуміти СSS', completed: false, priority: 'high' },
+// //     { id: 3, text: 'Зрозуміти HTML', completed: false, priority: 'high' },
+// //     { id: 4, text: 'Зрозуміти Pascale', completed: true, priority: 'low' }
+// // ]; // Создав змінну з камал кейс по стандарту, далі ну обьекти, ну і стьоб зробив типу ну бля, типу с і паскал
+// // // типу легко вивчити а ось типу хтмл і цсс тип не реально ахахах) ну і все)) щас ебашить буду фільтр)
+// //
+// // const titles = topTaskWorld.map(task => task.text);
+// // console.log(titles); // мапчик
 //
-// const titles = topTaskWorld.map(task => task.text);
-// console.log(titles); // мапчик
+// let user = { name: "Макс", isBlocked: true };
+//
+// // Что нужно написать вместо вопросов, чтобы проверить, забанен ли Макс?
+// if (user.isBlocked === true) {
+//     console.log("Доступ запрещен! Вы забанены.");
+// } else {
+//     console.log("Добро пожаловать в систему!");
+// }
 
-let user = { name: "Макс", isBlocked: true };
+// let arr1 = [1, 2]; // масс1
+// let arr2 = [3, 4]; // масс2
+// let combined = [...arr1, ...arr2]; // комбинируем массивы наши с помощью оператора спреар, он же ... россыпь старого массива делаемт
+// console.log(combined); // ну и вывод консоль
+//
 
-// Что нужно написать вместо вопросов, чтобы проверить, забанен ли Макс?
-if (user.isBlocked === true) {
-    console.log("Доступ запрещен! Вы забанены.");
-} else {
-    console.log("Добро пожаловать в систему!");
-}
+// let InetUser = {
+//     name: 'Kyrylo',
+//     balance: 2000,
+//     getReport() {
+//         return 'Client: ' + this.name + ', Balance: ' + this.balance;
+//     }
+// }; // ну понятно создали обьект кинули в него значения имя баланс, база дальше открываем функцию внутри обьекта и возвращаем с этой
+// // функции вырываем нейм з контекста и баланс чтоб не писать InetUser.name ) проще))
+//
+// let InetUser2 = {...InetUser}; // оператор спеар)) рассыпаем все в юзер 2 все что было в том юзере который вставили в обьект, почему обьект ставим типл {} дяк
+//
+// InetUser2.name = 'Serhiy'; // просто придаем новое имя))
+//
+// console.log(InetUser.getReport()); // ну и чекаем через функцию но смотрим что нам вернул прежний юзер
+// console.log(InetUser2.getReport()); // и соответсвенно что вернул юзер2)) так то все)) лбьяснил как я это понимаб)) когда буду понимать писать легче и голова яснее))
+
+// let transactions = [100, 300, 200, 400];
+//
+// transactions.push(500); // изи это помню хорошо)) поп удалит с конца шифт добавит в начало а аншифт удалит с начала))
+//
+// console.log(transactions); // написал кстати сам без подсказок))
+
+// let history = [
+// { type: 'deposit', amount: 100 },
+// { type: 'withdraw', amount: 50}
+// ];
+//
+// history.push({ type: 'deposit', amount: 400});
+// history.shift({ type: 'deposit', amount: 400}); // по приколу и добавлял и выводил) ахахах) ссори))
+//
+// console.log(history.length); // тоже понимаю но наверное не ккоректное удаление типу а вообще я натупил))
+
+// let transactions = [200, -120, -50, 450];
+//
+// transactions.forEach(transaction => {
+//     console.log("Transaction:", transaction);
+// }) // есть)) догадался чисто что просто нужно функции транзакция назвать да и все)) правильно??
+// // чем отличается цикл фор и фориач??) правильно сработал??
+
+// // фильтрация вообще легко))
+// let trans = [100, -20, -75, 110, -11];
+//
+// let waste = trans.filter((t) => t <= 0);
+//
+// console.log(waste); // сделал так чтоб васт выводил то что меньше или равно нулю но странно)) к деньгам такое не идет поэтому
+// // логичнее просто меньше < 0 вот и все))
+
+// // еще примеры базовые
+// let num = [1, 20, 3, 2, 111, 10, 5, 80, 12, 13, 20];
+//
+// let num2 = num.filter((n) => n % 2 === 0);
+//
+// console.log(num2);
+
+// шаблонні строки
+
+// let user = "Andry";
+// let sum = 1000;
+//
+// let oldWay = "Hi, " + user + "! Balance: " + sum + " dollars";
+// let newWay = `Hi, ${user}! Balance: ${sum} dollars`;
+//
+// console.log(oldWay);
+// console.log(newWay); // запам'ятав)) так легше справді) читабельніше та писати швидше)
+
+// map від легкого до тяжче))
+
+// let names = ['dmytro', 'nazar', 'alex'];
+//
+// let bigNames = names.map(name => name.toUpperCase()); // прикол не знав про цей метод, типу шо капс робить але вш підказав та я прочитав
+//
+// console.log(bigNames);  // изи так то)) дальше)
+//
+
+// let prices = [100, 200, 300, 400];
+//
+// let htmlPrices = prices.map((p) => `<li>${p}</li>`);
+//
+// console.log(htmlPrices); // оно мне 4 раза по кругу отдалось да и все хз как решить.. туплю) ну и может кажется но задача дебильная но тем не менее))
+//
+
+// let users = [
+//     { id: 1, name: 'Alina' },
+//     { id: 2, name: 'Olha'}
+// ];
+//
+// let userId = users.map((us) => us.id);
+//
+// console.log(userId); // есть ваще легко но натупил как всегда)) сначала натупил вводил юзерс айди, потом в консоль выводио так же
+// // юзерс айди, потом еще и в терминале тупанул, но все фикшу, как могу))
+
+// find & sort
+
+// let users = [
+//     { id: 1, name: "alex"},
+//     { id: 2, name: "oleg"},
+//     { id: 3, name: "stive"}
+// ];
+//
+// let usersFind = users.find((u) => u.id === 2); // тоже ошибался и сам правил, сначала ошибка писал не юзерс финд а юзер, потом ошибка писал ю === 2 а не ю.айди а так то все) главное что правлю своей бошкой)
+//
+// console.log(usersFind);
+
+// let amounts = [500, 1200, 100, 300];
+//
+// amounts.sort((a, b) => a - b); // easy если большее к меньшему б - а) легко))
+//
+// console.log(amounts);
+
+
+// try | catch
+//
+// писать пример не буду толку нет понял, тру выполняем код, если ошибка все не падает а спокойно выводим ошибку через катч)
