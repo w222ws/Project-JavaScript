@@ -91,21 +91,21 @@ let user = { name: "Макс", isBlocked: true };
 //
 // map від легкого до тяжче))
 //
-// let names = ['dmytro', 'nazar', 'alex'];
+// const names = ['dmytro', 'nazar', 'alex'];
 //
 // let bigNames = names.map(name => name.toUpperCase()); // прикол не знав про цей метод, типу шо капс робить але вш підказав та я прочитав
 //
 // console.log(bigNames);  // изи так то)) дальше)
 //
 //
-// let prices = [100, 200, 300, 400];
+// const prices = [100, 200, 300, 400];
 //
 // let htmlPrices = prices.map((p) => `<li>${p}</li>`);
 //
 // console.log(htmlPrices); // оно мне 4 раза по кругу отдалось да и все хз как решить.. туплю) ну и может кажется но задача дебильная но тем не менее))
 //
 //
-// let users = [
+// map users = [
 //     { id: 1, name: 'Alina' },
 //     { id: 2, name: 'Olha'}
 // ];
@@ -175,3 +175,57 @@ let user = { name: "Макс", isBlocked: true };
 // }, { plus: 0, minus: 0 });
 //
 // console.log(report);
+
+// задачки
+// const clients = [
+//     { name: 'Alex', balance: 500 },
+//     { name: 'Sergo', balance: 1000 },
+//     { name: 'Mike', balance: 3000},
+//     { name: 'Trent', balance: 300 }
+// ];
+//
+// const Vipclient = clients
+// .filter(user => user.balance >= 1000 )
+// .map(n => n.name.toUpperCase());
+//
+// console.log(Vipclient); // легко)) справився)
+
+// const client = [
+//     { name: 'Sanya', balance: 300 },
+//     { name: 'Sofia', balance: 500 },
+//     { name: 'Olha', balance: 200 },
+// ];
+//
+// const blackList = ['Sandro', 'Oleg', 'Sofia'];
+//
+// const foundUser = client.find((user) => user.name === 'Sanya');
+//
+// const isBanned = blackList.includes(foundUser.name);
+//
+// console.log(` User ${foundUser.name} is Banned? ${isBanned}`); // софья в бане, саня нет, просто покрутил
+// // инслудес чисто проверяет статус как я понял типо или как??)
+
+// const history = [300, -100, 400, -250];
+//
+// const formattedHistory = history.map((amount) => {
+//     const sing = amount > 0 ? '+' : '';
+//
+//     return `[DATE]: ${sing}${amount} USD`;
+// });
+//
+// console.log(formattedHistory); // поняв задачу, просто ось у нас с сервака типу прийшла відповідь типу ну история транзакций
+// // тогда оформленнИстория типо преобразуем массив количество функция синг что обозначает типо синг количество больше 0 тогда плюс иначе пустота тип или я не так понял ваще плохо все равно понимаю
+// // ну и делаем ретерн типу дата когда было подключалась бы, синг амоюнт д
+// // оллар кажлый раз когда помещаем переменную, ну и юсд понятно и чек консоль) поясни мне все просто)) обнял!!)
+//
+
+// const family = [
+//     { id: 1, name: 'Olha', salary: 2000},
+//     { id: 2, name: 'Sanya', salary: 2200},
+//     { id: 3, name: 'AlinaBoss777', salary: 9999999999},
+// ];
+//
+// const salaryBig = family.filter((s) => s.salary > 2500);
+//
+// console.log(salaryBig); // по приколу
+
