@@ -227,5 +227,5 @@ let user = { name: "Макс", isBlocked: true };
 //
 // const salaryBig = family.filter((s) => s.salary > 2500);
 //
-// console.log(salaryBig); // по приколу
+// console.log(salaryBig);
 
