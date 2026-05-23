@@ -208,3 +208,52 @@
 // const salaryBig = family.filter((s) => s.salary > 2500);
 //
 // console.log(salaryBig);
+
+
+// Closures / Замыкания
+
+ // function createBankCard(owner) {
+ //     let balance = 0;
+ //
+ //     return function(amount) {
+ //         balance += amount;
+ //         return `${owner}, твой баланс: ${balance}$`;
+ //     }
+ // }
+ //
+ // const sanyaCard = createBankCard('Sanya');
+ //
+ // console.log(sanyaCard(500));
+ // console.log(sanyaCard(200));
+
+// function createPlayer(name) {
+//     let score = 0;
+//
+//
+//     return function () {
+//     score ++;
+//     return `name: ${name} has ${score} score`;
+//     }
+// }
+//
+// const sanyaStatus = createPlayer('Sanya');
+//
+// console.log(sanyaStatus());
+//  console.log(sanyaStatus());
+//
+// const apple = {
+//     price: 1000,
+//     showPrice: function() {
+//         console.log(`apple price: ${this.price}`);
+//     }
+// };
+//
+// const samsung = {
+//     price: 800
+// };
+//
+// apple.showPrice();
+//
+// const checkSamsung = apple.showPrice.bind(samsung);
+//
+// checkSamsung();
