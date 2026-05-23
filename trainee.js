@@ -206,7 +206,7 @@
 // ];
 //
 // const salaryBig = family.filter((s) => s.salary > 2500);
-//
+
 // console.log(salaryBig);
 
 
