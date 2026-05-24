@@ -156,6 +156,22 @@
 //
 // console.log(report);
 
+// const prices = [100, 500, 200, 800];
+// const totalPrice = prices.reduce((acc, curr) => {
+//  return acc + curr;
+// }, 0);
+// console.log(totalPrice);
+
+// const nums = [11, 5, 55, 42, 3];
+// const max = nums.reduce((acc, curr) => {
+//  if (curr > acc) {
+//   return curr;
+//  } else {
+//   return acc;
+//  }
+// }, [0]);
+// console.log(max);
+
 // задачки
 // const clients = [
 //     { name: 'Alex', balance: 500 },
@@ -183,7 +199,7 @@
 // const isBanned = blackList.includes(foundUser.name);
 //
 // console.log(` User ${foundUser.name} is Banned? ${isBanned}`); // софья в бане, саня нет, просто покрутил
-// // инслудес чисто проверяет статус как я понял типо или как??)
+// // инслудес чисто проверяет статус
 
 // const history = [300, -100, 400, -250];
 //
@@ -193,11 +209,7 @@
 //     return `[DATE]: ${sing}${amount} USD`;
 // });
 //
-// console.log(formattedHistory); // поняв задачу, просто ось у нас с сервака типу прийшла відповідь типу ну история транзакций
-// // тогда оформленнИстория типо преобразуем массив количество функция синг что обозначает типо синг количество больше 0 тогда плюс иначе пустота тип или я не так понял ваще плохо все равно понимаю
-// // ну и делаем ретерн типу дата когда было подключалась бы, синг амоюнт д
-// // оллар кажлый раз когда помещаем переменную, ну и юсд понятно и чек консоль) поясни мне все просто)) обнял!!)
-//
+// console.log(formattedHistory);
 
 // const family = [
 //     { id: 1, name: 'Olha', salary: 2000},
@@ -257,3 +269,101 @@
 // const checkSamsung = apple.showPrice.bind(samsung);
 //
 // checkSamsung();
+
+
+// function getUser() {
+//  const name = 'Ivan'
+//   return function() {
+//   return name;
+//   };
+//  }
+//
+//  const user = getUser();
+// console.log(user());
+
+
+//   function createIdGenerator() {
+//    let usId = 0;
+//    return function() {
+//     usId++;
+//     return usId;
+//    };
+//   }
+//
+//   const nextId = createIdGenerator();
+//
+// console.log(nextId());
+//  console.log(nextId());
+
+// function initPlayer() {
+//  const userPlayer = 'Sanya'
+//  return function() {
+//   return userPlayer;
+//   };
+//  }
+//
+//  const playerName = initPlayer();
+// console.log(playerName());
+
+// function createBox() {
+//  let money = 0;
+//
+//  return {
+//   add: function(amount) {
+//    money += amount;
+//   },
+//   get: function() {
+//    let current = money;
+//    money = 0;
+//    return current;
+//   }
+//  };
+// }
+//
+// const box = createBox();
+// box.add(500);
+// box.add(-100);
+//
+// console.log(box.get());
+// console.log(box.get());
+
+ // function createCensor(badWord) {
+ // return function(text) {
+ //  return text.replace(badWord, '***');
+ //  };
+ // }
+ //
+ // const censor = createCensor('super');
+ // console.log(censor('super bro!'));
+
+//  const user = {
+//   name: 'Sashko',
+//   sayHi: function() {
+//    setTimeout( function()  {
+//     console.log(this.name);
+//    }, 1000);
+//
+//    setTimeout(() => {
+//     console.log(this.name);
+//    }, 2000);
+//   }
+//  };
+//
+// user.sayHi();
+
+//  const counter = {
+//   count: 0,
+//   increment: function() {
+//    setInterval(() => {
+//     this.count++;
+//     console.log(this.count);
+//    }, 1000);
+//   }
+//  };
+// counter.increment();
+
+// const user = { name: 'Alex', age: 31, salary: 1500};
+//
+// const { name, age, salary } = user;
+//
+// console.log(name);
