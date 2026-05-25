@@ -367,3 +367,33 @@
 // const { name, age, salary } = user;
 //
 // console.log(name);
+
+ // АССИНХРОНКА
+
+ function checkBankSystem() {
+  return new Promise((resolve, reject) => {
+   console.log("--- Починаємо перевірку... ---");
+
+   setTimeout(() => {
+    const isOnline = true;
+
+    if (isOnline) {
+     resolve("✅ ГОТОВ!");
+    } else {
+     reject("❌ ПОМИЛКА");
+    }
+   }, 2000);
+    });
+ }
+
+ checkBankSystem()
+     .then((message) => {
+      //
+      console.log("Повідомлення банка:", message);
+     })
+     .catch((error) => {
+      //
+      console.error("Упс:", error);
+     });
+
+ console.log("Синхронний код: Я виведусь першим, поки банк перевіряється!");
