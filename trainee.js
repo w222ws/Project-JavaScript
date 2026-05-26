@@ -370,30 +370,132 @@
 
  // АССИНХРОНКА
 
- function checkBankSystem() {
-  return new Promise((resolve, reject) => {
-   console.log("--- Починаємо перевірку... ---");
+ // function checkBankSystem() {
+ //  return new Promise((resolve, reject) => {
+ //   console.log("--- Починаємо перевірку... ---");
+ //
+ //   setTimeout(() => {
+ //    const isOnline = true;
+ //
+ //    if (isOnline) {
+ //     resolve(" ГОТОВ!");
+ //    } else {
+ //     reject(" ПОМИЛКА");
+ //    }
+ //   }, 2000);
+ //    });
+ // }
+ //
+ // checkBankSystem()
+ //     .then((message) => {
+ //      //
+ //      console.log("Повідомлення банка:", message);
+ //     })
+ //     .catch((error) => {
+ //      //
+ //      console.error("Упс:", error);
+ //     });
+ //
+ // console.log("Синхронний код: Я виведусь першим, поки банк перевіряється!");
 
-   setTimeout(() => {
-    const isOnline = true;
+// function login(pass) {
+//  return new Promise((resolve, reject) => {
+//   if (pass === '1234') {
+//    resolve('Access is open')
+//   } else {
+//    reject('Access is closed')
+//   }
+//  });
+// }
+//
+// login('1224') // спецом сделал ошибку
+//  .then((data) => {
+//   console.log(data);
+//  })
+//  .catch((err) => {
+//   console.log(err);
+//  });
 
-    if (isOnline) {
-     resolve("✅ ГОТОВ!");
-    } else {
-     reject("❌ ПОМИЛКА");
-    }
-   }, 2000);
-    });
+ // function getBalance(userID) {
+ //  return new Promise((resolve, reject) => {
+ //
+ //   setTimeout(() => {
+ //
+ //    if (userID === 7) {
+ //     resolve(1000);
+ //    } else {
+ //     reject('User not found!');
+ //    }
+ //
+ //   }, 1000);
+ //
+ //  });
+ // }
+ //
+ // getBalance(7)
+ // .then((money) => console.log('User balance: ' + money))
+ // .catch((err) => console.log('Sorry: ' + err));
+
+
+// TASK PROMISE
+
+ // function applyCoupone(code) {
+ //  return new Promise((resolve, reject) => {
+ //   if (code === 'SALE') {
+ //    resolve(20);
+ //   } else {
+ //    reject('Invalid code!');
+ //   }
+ //  });
+ // }
+ //
+ // applyCoupone('SALE')
+ //     .then((discount) => {
+ //      console.log('Discount: ' + discount + '%');
+ //     })
+ //     .catch((err) => {
+ //      console.log('Error: ' + err);
+ //     });
+
+// function orderFood(item) {
+//  return new Promise((resolve, reject) => {
+//
+//   setTimeout(() => {
+//
+//    if (item === 'burger') {
+//     resolve({ status: 'deliverid', time: 20 + ' min'});
+//    } else {
+//     reject('Sorry, we only have pizza')
+//    }
+//   }, 1500);
+//  });
+// }
+//
+// orderFood('burger')
+//  .then((itm) => console.log('FOOD ', itm)) // я просто хз как вернуть обьект))
+//  .catch((err) => console.log('' + err));
+
+ function getBalance(userId) {
+ return new Promise((resolve, reject) => {
+
+  setTimeout(() => {
+   if (userId === 2) {
+    resolve(1000)
+   }  else {
+    reject('User is not found!')
+   }
+  }, 1200);
+ });
  }
 
- checkBankSystem()
-     .then((message) => {
-      //
-      console.log("Повідомлення банка:", message);
-     })
-     .catch((error) => {
-      //
-      console.error("Упс:", error);
-     });
+ getBalance(2)
 
- console.log("Синхронний код: Я виведусь першим, поки банк перевіряється!");
+     .then((money) => {
+  console.log('reciveide a base: ' + money)
+  return money + 500;
+ })
+
+.then((total) => {
+ console.log('bonus: ' + total);
+})
+ .catch((err) => console.log('Error: ' + err));
