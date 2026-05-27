@@ -475,27 +475,43 @@
 //  .then((itm) => console.log('FOOD ', itm)) // я просто хз как вернуть обьект))
 //  .catch((err) => console.log('' + err));
 
- function getBalance(userId) {
- return new Promise((resolve, reject) => {
+//  function getBalance(userId) {
+//  return new Promise((resolve, reject) => {
+//
+//   setTimeout(() => {
+//    if (userId === 2) {
+//     resolve(1000)
+//    }  else {
+//     reject('User is not found!')
+//    }
+//   }, 1200);
+//  });
+//  }
+//
+//  getBalance(2)
+//
+//      .then((money) => {
+//   console.log('reciveide a base: ' + money)
+//   return money + 500;
+//  })
+//
+// .then((total) => {
+//  console.log('bonus: ' + total);
+// })
+//  .catch((err) => console.log('Error: ' + err));
 
-  setTimeout(() => {
-   if (userId === 2) {
-    resolve(1000)
-   }  else {
-    reject('User is not found!')
-   }
-  }, 1200);
+ function getPizza() {
+ return new Promise((resolve, reject) => {
+  setTimeout(() => resolve('Peperoni'), 2000);
  });
  }
 
- getBalance(2)
+ async function startDinner() {
+ console.log('Ordening...')
 
-     .then((money) => {
-  console.log('reciveide a base: ' + money)
-  return money + 500;
- })
+  const pizza = await getPizza();
 
-.then((total) => {
- console.log('bonus: ' + total);
-})
- .catch((err) => console.log('Error: ' + err));
+ console.log('arrived ' + pizza);
+ }
+
+ startDinner();
