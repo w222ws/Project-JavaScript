@@ -500,19 +500,54 @@
 // })
 //  .catch((err) => console.log('Error: ' + err));
 
- function getPizza() {
- return new Promise((resolve, reject) => {
-  setTimeout(() => resolve('Peperoni'), 2000);
- });
+ // function getPizza() {
+ // return new Promise((resolve, reject) => {
+ //  setTimeout(() => resolve('Peperoni'), 2000);
+ // });
+ // }
+ //
+ // async function startDinner() {
+ // console.log('Ordening...')
+ //
+ //  const pizza = await getPizza();
+ //
+ // console.log('arrived ' + pizza);
+ // }
+
+ // startDinner();
+
+// function getBalance() {
+//  return new Promise((resolve, reject) => {
+//   setTimeout(() => resolve(1000), 1000);
+//  });
+// }
+//
+// async function checkBalance() {
+//  try {
+//   const money = await getBalance();
+//
+//   console.log(`Balance: ${money}`)
+//
+//  } catch (error) {
+//   console.log(error);
+//  }
+// }
+// checkBalance();
+
+ async function getProfileData() {
+ try {
+  console.log('run queries');
+
+  const [name, mentors, balance] = await Promise.all([
+      getName(),
+      getMentors(),
+      getBalance(),
+  ]);
+
+  console.log(`data is ready: ${name}, mentors: ${mentors}, balance: ${balance}`);
+ } catch (error) {
+  console.log(error);
+ }
  }
 
- async function startDinner() {
- console.log('Ordening...')
-
-  const pizza = await getPizza();
-
- console.log('arrived ' + pizza);
- }
-
- startDinner();
-
+ getProfileData();
