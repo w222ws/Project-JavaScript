@@ -534,20 +534,20 @@
 // }
 // checkBalance();
 
- async function getProfileData() {
- try {
-  console.log('run queries');
-
-  const [name, mentors, balance] = await Promise.all([
-      getName(),
-      getMentors(),
-      getBalance(),
-  ]);
-
-  console.log(`data is ready: ${name}, mentors: ${mentors}, balance: ${balance}`);
- } catch (error) {
-  console.log(error);
- }
- }
-
- getProfileData();
+ // async function getProfileData() {
+ // try {
+ //  console.log('run queries');
+ //
+ //  const [name, mentors, balance] = await Promise.all([
+ //      getName(),
+ //      getMentors(),
+ //      getBalance(),
+ //  ]);
+ //
+ //  console.log(`data is ready: ${name}, mentors: ${mentors}, balance: ${balance}`);
+ // } catch (error) {
+ //  console.log(error);
+ // }
+ // }
+ //
+ // getProfileData();
