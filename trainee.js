@@ -551,3 +551,18 @@
  // }
  //
  // getProfileData();
+
+//  async function startPost() {
+//     try {
+//         const isAuth = await checkAuth();
+//
+//         if (isAuth === true) {
+//             const result = await uploadPost();
+//         } else {
+//             console.log('no auth');
+//         }
+//     } catch (e) {
+//         console.log('error', e);
+//     }
+// }
+
